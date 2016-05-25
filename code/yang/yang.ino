@@ -10,13 +10,14 @@ Version 1.0  2015-01-01 Initial Version derived from TrinketKeyBoardExample  Mik
 // Switches are connected from ground to these defined pins
 const int PIN_BUTTON_A = 9;
 const int PIN_BUTTON_B    = 10;
+const int PIN_BUTTON_C    = 11;
 
 const int xAxis  = 1;         // joystick X axis to A1 
 const int yAxis  = 0;         // joystick Y axis to A0
 // parameters for reading the joystick
 int range = 12;               // output range of X or Y movement (zero to range)
 int responseDelay = 5;        // response delay of the mouse, in ms
-int threshold = range/4;      // resting threshold
+int threshold = range/3;      // resting threshold
 int center = range/2;         // resting position value
 const float powerValue = 1.4; // for exponential behavior, 1 < value < 2
 
@@ -24,15 +25,18 @@ const float powerValue = 1.4; // for exponential behavior, 1 < value < 2
 bool arrow_pressed = false;
 bool a_pressed = false;
 bool b_pressed = false;
+bool c_pressed = false;
 void setup()
 {
   // Declare button pins as inputs
   pinMode(PIN_BUTTON_A, INPUT);
   pinMode(PIN_BUTTON_B,    INPUT);
+  pinMode(PIN_BUTTON_C,    INPUT);
 
   // setting input pins to high means turning on internal pull-up resistors
   digitalWrite(PIN_BUTTON_A, HIGH);
   digitalWrite(PIN_BUTTON_B,    HIGH);
+  digitalWrite(PIN_BUTTON_C,    HIGH);
   // remember, the buttons are active-low, they read LOW when they are not pressed
 
   // start USB stuff
@@ -83,7 +87,7 @@ void loop()
         TrinketKeyboard.pressKey(0, KEYCODE_ARROW_LEFT, KEYCODE_S);
       else
         TrinketKeyboard.pressKey(0, KEYCODE_ARROW_LEFT);
-    arrow_pressed = true; 
+      arrow_pressed = true; 
    }
    if(yReading > 0) {
       if (digitalRead(PIN_BUTTON_A) == LOW)
@@ -132,6 +136,17 @@ void loop()
   {
     TrinketKeyboard.pressKey(0, 0);
     b_pressed = false;
+  }
+  if (digitalRead(PIN_BUTTON_C) == LOW)
+  {
+    // type out a string using the Print class
+    TrinketKeyboard.pressKey(0, KEYCODE_    D);
+    c_pressed = true;
+  }
+    if (digitalRead(PIN_BUTTON_C) == HIGH && c_pressed )
+  {
+    TrinketKeyboard.pressKey(0, 0);
+    c_pressed = false;
   }
 
 }
