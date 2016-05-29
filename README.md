@@ -10,7 +10,8 @@ On OSX, place the included libraries in ~/Documents/Arduino/libraries, so that t
 	    | Pro_Trinket_USB_Mouse-master
 	    
 On windows, navigate to your home directory and include the libraries in Users\<your user>\Documents\Arduino\Libraries. Folder structure looks like: 
-    | ~Users\<your user>\Documents\Arduino\libraries
+    
+    | ~Users/<your user>/Documents/Arduino/libraries
 	    | Pro_Trinket_USB_Keyboard_Library-master
 	    | Pro_Trinket_USB_Mouse-master
 
