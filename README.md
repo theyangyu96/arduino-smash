@@ -20,4 +20,4 @@ On windows, navigate to your home directory and include the libraries in Users\<
 The Arduino code can be run from anywhere once you have it downloaded.  To upload to your device, hit the reset button on your Adafruit; in Arduino, hit `Sketch`, then `Upload`.
 
 # Playing
-You can find Super Smash Flash 2 (here)[http://mcleodgaming.com/games/ssf2]
+You can find Super Smash Flash 2 [here](http://mcleodgaming.com/games/ssf2)
