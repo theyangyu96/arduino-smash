@@ -8,5 +8,12 @@ On OSX, place the included libraries in ~/Documents/Arduino/libraries, so that t
     | ~/Documents/Arduino/libraries
 	    | Pro_Trinket_USB_Keyboard_Library-master
 	    | Pro_Trinket_USB_Mouse-master
+	    
+On windows, navigate to your home directory and include the libraries in Users\<your user>\Documents\Arduino\Libraries. Folder structure looks like: 
+    | ~Users\<your user>\Documents\Arduino\libraries
+	    | Pro_Trinket_USB_Keyboard_Library-master
+	    | Pro_Trinket_USB_Mouse-master
+
+
 
 The Arduino code can be run from anywhere once you have it downloaded.  To upload to your device, hit the reset button on your Adafruit; in Arduino, hit `Sketch`, then `Upload`.
