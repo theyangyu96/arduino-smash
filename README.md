@@ -19,6 +19,9 @@ On windows, navigate to your home directory and include the libraries in Users\<
 
 The Arduino code can be run from anywhere once you have it downloaded.  To upload to your device, hit the reset button on your Adafruit; in Arduino, hit `Sketch`, then `Upload`.
 
+This is what our controller looks like:
+![Arduino Smash Controller](https://github.com/theyangyu96/arduino-smash/blob/master/controller_image.jpg)
+
 # Playing
 You can find Super Smash Flash 2 [here](http://mcleodgaming.com/games/ssf2). Currently, the configuration has the joystick mapped to direction arrows and the 3 buttons to A, S, D from left to right. Go into the settings of the game and map the the controls: A as regular attack, S as special, D as shield, and arrows as directions. You can add more controllers by modifying the button mapping both in the code and in the game, enjoy!
 
